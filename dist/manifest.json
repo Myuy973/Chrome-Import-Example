@@ -1,0 +1,20 @@
+{
+	"name": "chrome import example",
+	"description": "",
+	"manifest_version": 3,
+	"version": "1.0",
+	
+	"content_scripts": [
+        {
+         	"js": ["./js/content.js"],
+			"matches": ["https://qiita.com/*"]
+		}
+    ],
+	"action": {
+		"default_popup": "option.html"
+	},
+	"background": {
+		"service_worker": "./js/background.js",
+		"type": "module"
+	}
+}

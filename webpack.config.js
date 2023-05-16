@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -10,4 +11,17 @@ module.exports = {
     path: path.join(__dirname, "dist/js"),
     filename: "[name].js",
   },
+
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        { 
+          from: ".", 
+          to: "../",
+          context: "public"
+        }
+      ]
+    })
+  ],
+  
 };
