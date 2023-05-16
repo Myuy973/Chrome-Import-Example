@@ -1,0 +1,1 @@
+(()=>{const e=document.getElementById("to_content"),t=document.getElementById("to_background");e.onclick=()=>{chrome.tabs.query({active:!0,currentWindow:!0},(function(e){chrome.tabs.sendMessage(e[0].id,{message:"to content"},(()=>{chrome.runtime.lastError}))}))},t.onclick=()=>{chrome.runtime.sendMessage({message:"to background"},(()=>{chrome.runtime.lastError}))}})();

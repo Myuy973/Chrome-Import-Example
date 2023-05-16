@@ -6,7 +6,7 @@
 	
 	"content_scripts": [
         {
-         	"js": ["./js/content.js"],
+         	"js": ["dist/js/content.js"],
 			"matches": ["https://qiita.com/*"]
 		}
     ],
@@ -14,7 +14,7 @@
 		"default_popup": "option.html"
 	},
 	"background": {
-		"service_worker": "./js/background.js",
+		"service_worker": "dist/js/background.js",
 		"type": "module"
 	}
 }

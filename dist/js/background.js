@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener(((e,o,n)=>{"to background"==e.message&&console.log("background")}));
