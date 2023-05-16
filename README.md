@@ -1,0 +1,1 @@
+option.htmlの中にある各ボタンを押すと対応したcontentまたはbackgroundに送信されログを残す。
